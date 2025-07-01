@@ -1,3 +1,4 @@
+import { Outlet } from "react-router";
 import Navbar from "../component/Navbar";
 
 const MainLayout = () => {
@@ -5,6 +6,7 @@ const MainLayout = () => {
     <>
       <Navbar />
       MainLayout
+      <Outlet/> 
     </>
   );
 };
