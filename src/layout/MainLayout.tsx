@@ -4,7 +4,7 @@ import Navbar from "../component/main/Navbar";
 import Sidebar from "../component/main/Sidebar";
 import { Contex } from "../context/User";
 
-const Root = () => {
+const MainLayout = () => {
   const { assetTerm } = useContext(Contex);
   const containerRef = useRef<HTMLDivElement>(null);
   const isFirstRender = useRef(true); // Track initial render
@@ -45,4 +45,4 @@ const Root = () => {
   );
 };
 
-export default Root;
+export default MainLayout;
