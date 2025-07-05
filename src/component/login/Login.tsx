@@ -13,14 +13,14 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  let navigate = useNavigate();
-  let { setIsLogin, islogin } = useContext(Contex);
-  let [eyeon, seteyeon] = useState(false);
+  const navigate = useNavigate();
+  const { setIsLogin, islogin } = useContext(Contex);
+  const [eyeon, seteyeon] = useState(false);
   const handleTogglePassword = () => {
     seteyeon(!eyeon);
   };
   const [checked, setChecked] = useState(false);
-  let [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const handleRemember = (e) => {
     setChecked(!checked);
