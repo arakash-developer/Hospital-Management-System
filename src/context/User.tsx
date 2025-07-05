@@ -6,6 +6,8 @@ interface UserContextType {
   setForgetHide: (value: boolean) => void;
   assetTerm: string;
   setAssetTerm: (value: string) => void;
+  setIsLogin: (value: boolean) => void;
+  islogin: boolean;
 }
 
 export const Contex = createContext<UserContextType>({
@@ -13,6 +15,8 @@ export const Contex = createContext<UserContextType>({
   setForgetHide: () => {},
   assetTerm: "",
   setAssetTerm: () => {},
+  setIsLogin: () => {},
+  islogin: false,
 });
 
 interface UserProviderProps {
@@ -22,10 +26,18 @@ interface UserProviderProps {
 export const UserProvider = ({ children }: UserProviderProps) => {
   const [forgetHide, setForgetHide] = useState(false);
   const [assetTerm, setAssetTerm] = useState("");
+  const [islogin, setIsLogin] = useState(false);
 
   return (
     <Contex.Provider
-      value={{ forgetHide, setForgetHide, assetTerm, setAssetTerm }}
+      value={{
+        forgetHide,
+        setForgetHide,
+        assetTerm,
+        setAssetTerm,
+        setIsLogin,
+        islogin,
+      }}
     >
       {children}
     </Contex.Provider>

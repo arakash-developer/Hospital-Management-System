@@ -52,7 +52,11 @@ const Sidebar = () => {
               <>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/dashboard"
                   >
                     <HomeIcon />
@@ -61,7 +65,11 @@ const Sidebar = () => {
                 </li>
                 <li className="">
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/services"
                   >
                     <ServiceIcon />
@@ -79,7 +87,11 @@ const Sidebar = () => {
                 </li>
                 <li className="">
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/profiles"
                   >
                     <ProfilesIcon className="flex-shrink-0" />
@@ -97,7 +109,11 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/residualanalysis"
                   >
                     <ResidualanalysisIcon />
@@ -110,7 +126,11 @@ const Sidebar = () => {
               <>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/administrator"
                   >
                     <HomeIcon />
@@ -120,7 +140,11 @@ const Sidebar = () => {
 
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/inviteuser"
                   >
                     <ResidualanalysisIcon />
@@ -143,7 +167,11 @@ const Sidebar = () => {
                 </li> */}
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/manageservices"
                   >
                     <ManageService />
@@ -152,7 +180,11 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/manageusers"
                   >
                     <ManageUserIcon />
@@ -161,7 +193,11 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/managecustomers"
                   >
                     <ManageCustomersIcon />
@@ -170,7 +206,11 @@ const Sidebar = () => {
                 </li>
                 <li>
                   <NavLink
-                    className={({ isActive }) => `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${isActive ? "active" : ""}`}
+                    className={({ isActive }) =>
+                      `text-zinc-950/[0.7] text-base not-italic font-medium leading-6 flex items-center gap-2 py-2 pl-[18px] ${
+                        isActive ? "active" : ""
+                      }`
+                    }
                     to="/manageassets"
                   >
                     <Manageassetsicon />

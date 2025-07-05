@@ -8,13 +8,17 @@ import { Checkbox, Input, notification } from "antd";
 import { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { ScaleLoader } from "react-spinners";
+
+interface Company {
+  businessEmail: string;
+}
+
 const Login = () => {
   const [api, contextHolder] = notification.useNotification();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
   const navigate = useNavigate();
-  const { setIsLogin, islogin } = useContext(Contex);
+  const { setIsLogin } = useContext(Contex);
   const [eyeon, seteyeon] = useState(false);
   const handleTogglePassword = () => {
     seteyeon(!eyeon);
@@ -22,11 +26,11 @@ const Login = () => {
   const [checked, setChecked] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleRemember = (e) => {
+  const handleRemember = () => {
     setChecked(!checked);
   };
 
-  const handleLogin = async (e) => {
+  const handleLogin = async (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     if (!email) {
       api.info({
@@ -37,7 +41,7 @@ const Login = () => {
         ),
         description: (
           <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-            The new customer’s record is created successfully.
+            The new customer's record is created successfully.
           </p>
         ),
         icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
@@ -52,7 +56,7 @@ const Login = () => {
         ),
         description: (
           <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-            The new customer’s record is created successfully.
+            The new customer's record is created successfully.
           </p>
         ),
         icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
@@ -67,7 +71,7 @@ const Login = () => {
         ),
         description: (
           <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-            The new customer’s record is created successfully.
+            The new customer's record is created successfully.
           </p>
         ),
         icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
@@ -100,7 +104,7 @@ const Login = () => {
             ),
             // description: (
             //   <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-            //     The new customer’s record is created successfully.
+            //     The new customer's record is created successfully.
             //   </p>
             // ),
             icon: <img src={Success} alt="success" className="w-6 h-6" />,
@@ -121,7 +125,7 @@ const Login = () => {
             ),
             // description: (
             //   <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-            //     The new customer’s record is created successfully.
+            //     The new customer's record is created successfully.
             //   </p>
             // ),
             icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
@@ -142,7 +146,7 @@ const Login = () => {
         if (data.user.roles[0] !== "administrator") {
           if (companyData.status === "success") {
             const companyEmails = companyData.data.map(
-              (company) => company.businessEmail
+              (company: Company) => company.businessEmail
             );
             if (companyEmails.includes(email)) {
               localStorage.setItem("logintoken", "akash@123");
@@ -165,7 +169,7 @@ const Login = () => {
               ),
               // description: (
               //   <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-              //     The new customer’s record is created successfully.
+              //     The new customer's record is created successfully.
               //   </p>
               // ),
               icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
@@ -174,22 +178,22 @@ const Login = () => {
           }
         }
       } catch (error) {
+        const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
         api.info({
           message: (
             <h2 className="font-medium text-[22px] leading-[117%] text-[#343a40] capitalize">
-              {error.message}
+              {errorMessage}
             </h2>
           ),
           // description: (
           //   <p className="font-normal text-xs leading-[135%] text-[var(--text-secondary)]">
-          //     The new customer’s record is created successfully.
+          //     The new customer's record is created successfully.
           //   </p>
           // ),
           icon: <img src={CloseIcon} alt="close" className="w-6 h-6" />,
           placement: "topRight",
         });
         setLoading(false);
-        setError(error.message);
       }
     }
   };
