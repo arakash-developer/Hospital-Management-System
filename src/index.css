@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
 :root {
   --primary: #ed272c;
   --primary2: #080607;
@@ -39,6 +37,10 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Inter", sans-serif;
+}
+#root {
+  height: 100%;
+  width: 100%;
 }
 img {
   max-width: 100%;
