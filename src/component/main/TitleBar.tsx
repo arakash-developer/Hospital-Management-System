@@ -35,8 +35,8 @@ const TitleBar = () => {
 
   return (
     <div
-      className="h-8 bg-[var(--secondary)] flex items-center justify-between px-4 select-none"
-      style={{ WebkitAppRegion: "drag" }}
+      className="h-8 flex items-center justify-between px-4 select-none bg-[var(--primary)]"
+      style={{ WebkitAppRegion: "drag" } as React.CSSProperties}
     >
       {/* Left side - App title */}
       <div className="flex items-center gap-2">
@@ -47,7 +47,10 @@ const TitleBar = () => {
       </div>
 
       {/* Right side - Window controls */}
-      <div className="flex items-center" style={{ WebkitAppRegion: "no-drag" }}>
+      <div
+        className="flex items-center"
+        style={{ WebkitAppRegion: "no-drag" } as React.CSSProperties}
+      >
         {/* Minimize button */}
         <button
           onClick={handleMinimize}

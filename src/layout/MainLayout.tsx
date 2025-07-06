@@ -28,7 +28,7 @@ const MainLayout = () => {
 
   return (
     <div className="h-screen overflow-hidden bg-[var(--background)]">
-      {/* <TitleBar /> */}
+      <TitleBar />
       <div
         className="flex items-start"
         style={{ height: "calc(100vh - 32px)" }}
