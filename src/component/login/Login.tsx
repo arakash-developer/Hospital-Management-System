@@ -2,7 +2,7 @@ import LoginImg from "@public/login.webp";
 import React from "react";
 const Login: React.FC = () => {
   return (
-    <div className="bg-[var(--white)] py-6 pl-[56px] pr-6 flex justify-between items-center">
+    <div className="bg-[var(--white)] py-6 pl-[56px] pr-6 flex  flex-col justify-center items-center md:flex-row md:justify-between">
       <div className="">
         <h1>Log In</h1>
         <p>Log in to securely access your dashboard</p>
