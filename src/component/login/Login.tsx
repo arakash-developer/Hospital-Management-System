@@ -2,12 +2,12 @@ import LoginImg from "@public/login.webp";
 import React from "react";
 const Login: React.FC = () => {
   return (
-    <div className="bg-[var(--white)] py-6 pl-5 md:pl-[56px] md:pr-6 flex  flex-col justify-center items-center md:flex-row md:justify-between">
+    <div className="bg-[var(--white)] py-6 pl-5 md:pl-[56px] xl:pr-6 flex  flex-col justify-center items-center md:flex-row md:justify-between">
       <div className="">
-        <h1>Log In</h1>
-        <p>Log in to securely access your dashboard</p>
+        <h1 className="h1_pageTitle">Log In</h1>
+        <p className="body_textRegular">Log in to securely access your dashboard</p>
       </div>
-      <div className="img_field xl:w-[564px] xl:h-[465px] overflow-hidden scale-[0.5] xl:scale-1">
+      <div className="img_field xl:w-[564px] xl:h-[465px] overflow-hidden scale-[0.5] xl:scale-100">
         <img className="w-full h-full " src={LoginImg} alt={"Login Image"} />
       </div>
     </div>
