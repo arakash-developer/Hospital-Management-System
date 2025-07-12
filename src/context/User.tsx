@@ -10,7 +10,7 @@ interface UserContextType {
   islogin: boolean;
 }
 
-export const Contex = createContext<UserContextType>({
+export const ffffContex = createContext<UserContextType>({
   forgetHide: false,
   setForgetHide: () => {},
   assetTerm: "",
