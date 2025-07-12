@@ -2,7 +2,6 @@ import { useContext, useEffect, useRef } from "react";
 import { Outlet } from "react-router-dom";
 import Navbar from "../component/main/Navbar";
 import Sidebar from "../component/main/Sidebar";
-import TitleBar from "../component/main/TitleBar";
 import { Contex } from "../context/User";
 
 const MainLayout = () => {
@@ -28,17 +27,13 @@ const MainLayout = () => {
 
   return (
     <div className="h-screen overflow-hidden bg-[var(--background)]">
-      <TitleBar />
-      <div
-        className="flex items-start"
-        style={{ height: "calc(100vh - 32px)" }}
-      >
+      <div className="flex items-start" style={{ height: "100vh" }}>
         <Sidebar />
         <div className="h-full w-full">
           <Navbar />
           <div
             className="overflow-y-scroll bg-[var(--background)]"
-            style={{ height: "calc(100% - 120px)" }}
+            style={{ height: "calc(100% - 88px)" }}
             ref={containerRef}
           >
             <div className="ml-8">
