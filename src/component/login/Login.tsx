@@ -39,7 +39,7 @@ const Login: React.FC = () => {
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="custom-black-input focus:text-[var(--text-normal)] font-normal text-sm leading-[171%] w-full h-[40px] border-[1.4px] border-[var(--field_stroke_color)] rounded-[8px] placeholder:text-[#919191] placeholder:text-sm placeholder:not-italic placeholder:font-normal placeholder:leading-[normal] py-3 px-4 bg-[var(--background)] "
+            className="custom-black-input focus:text-[var(--text-normal)] font-normal text-sm leading-[171%] w-full h-[40px] border-[1.4px] border-[var(--field_stroke_color)] rounded-[8px] placeholder:text-[#919191] placeholder:text-sm placeholder:not-italic placeholder:font-normal placeholder:leading-[normal] py-3 px-4 bg-[var(--background)]"
           />
         </div>
         <div
