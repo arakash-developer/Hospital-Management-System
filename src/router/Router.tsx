@@ -1,6 +1,6 @@
-import Login from "@/component/login/Login";
+import Login from "@component/login/Login";
+import MainLayout from "@layout/MainLayout";
 import { createBrowserRouter } from "react-router";
-import MainLayout from "../layout/MainLayout";
 
 export const routes = createBrowserRouter([
   {

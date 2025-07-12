@@ -27,10 +27,14 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"],
-      "@/assets/*": ["./src/assets/*"],
-      "@/public/*": ["./public/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@public/*": ["./public/*"],
       "@context/*": ["./src/context/*"],
-      "@component/*": ["./src/component/*"]
+      "@component/*": ["./src/component/*"],
+      "@layout/*": ["./src/layout/*"],
+      "@router/*": ["./src/router/*"],
+      "@lib/*": ["./src/lib/*"],
+      "@util/*": ["./src/util/*"]
     }
   },
   "include": ["src"]

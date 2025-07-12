@@ -12,6 +12,10 @@ export default defineConfig({
       "@public": path.resolve(__dirname, "./public"),
       "@context": path.resolve(__dirname, "./src/context"),
       "@component": path.resolve(__dirname, "./src/component"),
+      "@layout": path.resolve(__dirname, "./src/layout"),
+      "@router": path.resolve(__dirname, "./src/router"),
+      "@lib": path.resolve(__dirname, "./src/lib"),
+      "@util": path.resolve(__dirname, "./src/util"),
     },
   },
 });
