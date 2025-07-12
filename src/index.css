@@ -18,6 +18,7 @@ body {
 :root {
   --background: #fbfbfb;
   --white: #ffffff;
+  --primary: #2e90fa;
   --text_primary: #1e1e1e;
   --text_secondary: #6c757d;
 }
@@ -27,4 +28,16 @@ body {
 }
 .body_textRegular {
   @apply font-inter text-[16px] font-normal leading-[24px] text-[var(--text_secondary)] tracking-[0px];
+}
+.inputField_tableHeader {
+  @apply font-inter text-[14px] font-medium leading-[22px] text-[var(--text_primary)] tracking-[0px];
+}
+.caption_meta {
+  @apply font-inter text-[12px] font-normal leading-[18px] text-[var(--text_secondary)] tracking-[0px];
+}
+.caption_metaRightPrimary {
+  @apply font-inter text-[12px] font-normal leading-[18px] text-[var(--primary)] text-right tracking-[0px];
+}
+.button_cta {
+  @apply font-inter text-[16px] font-medium leading-[24px] text-[var(--white)] tracking-[0px];
 }
