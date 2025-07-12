@@ -4,11 +4,13 @@ import { Outlet } from "react-router";
 
 const MainLayout = () => {
   return (
-    <>
+    <div className="w-full flex bg-[var(--background)]">
       <Sidebar />
-      <Navbar />
-      <Outlet />
-    </>
+      <div className="w-full">
+        <Navbar />
+        <Outlet />
+      </div>
+    </div>
   );
 };
 
