@@ -21,6 +21,7 @@ body {
   --primary: #2e90fa;
   --text_primary: #1e1e1e;
   --text_secondary: #6c757d;
+  --field_stroke_color:#CED4DA; 
 }
 /* Base Typography */
 .h1_pageTitle {
