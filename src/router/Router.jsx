@@ -5,6 +5,7 @@ import Dashboard from "../pages/Dashboard";
 import Doctors from "../pages/Doctors";
 import NotFound from "../pages/NotFound";
 import Patients from "../pages/Patients";
+import Login from "../components/login/Login";
 
 const routes = [
   {
@@ -13,7 +14,7 @@ const routes = [
     children: [
       {
         index: true,
-        element: <Dashboard />,
+        element: <Login />,
       },
       {
         path: "patients",
