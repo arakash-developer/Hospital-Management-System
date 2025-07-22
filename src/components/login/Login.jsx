@@ -1,20 +1,47 @@
 // MUI Imports
 import themeConfig from "@/configs/themeConfig";
+import { useImageVariant } from "@/core/hooks/useImageVariant";
+import { useSettings } from "@/core/hooks/useSettings";
 import Logo from "@/layout/shared/Logo";
 import { Divider, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
+import classnames from "classnames";
 
+// Component Imports
+import Illustrations from "@components/Illustrations";
 
-const Login = () => {
+// Vars
+const darkImg = "/images/pages/auth-v2-mask-dark.png";
+const lightImg = "/images/pages/auth-v2-mask-light.png";
+const darkIllustration = "/images/illustrations/auth/v2-login-dark.png";
+const lightIllustration = "/images/illustrations/auth/v2-login-light.svg";
+const borderedDarkIllustration =
+  "/images/illustrations/auth/v2-login-dark-border.png";
+const borderedLightIllustration =
+  "/images/illustrations/auth/v2-login-light-border.png";
+
+const Login = ({ mode }) => {
+  const { settings } = useSettings();
+  const authBackground = useImageVariant(mode, lightImg, darkImg);
+
+  const characterIllustration = useImageVariant(
+    mode,
+    lightIllustration,
+    darkIllustration,
+    borderedLightIllustration,
+    borderedDarkIllustration
+  );
+
+  // const handleClickShowPassword = () => setIsPasswordShown(show => !show)
   return (
     <div className="flex bs-full justify-center">
       <div className="flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]">
-        <div className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'>
+        <div className="absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]">
           <Logo />
         </div>
         <div className="mt-5 flex flex-col gap-5 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset]">
           <div>
-            <Typography variant='h4'>{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography>
+            <Typography variant="h4">{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography>
             <Typography>Please sign in to continue</Typography>
           </div>
           {/* <Alert icon={false} className='bg-primaryLight'>
@@ -117,27 +144,27 @@ const Login = () => {
           </Button>
         </div>
       </div>
-      {/* <div
+      <div
         className={classnames(
-          'flex bs-full items-center justify-center flex-1 min-bs-[100dvh] relative p-6 max-md:hidden',
+          "flex bs-full items-center justify-center flex-1 min-bs-[100dvh] relative p-6 max-md:hidden",
           {
-            'border-ie': settings.skin === 'bordered'
+            "border-ie": settings.skin === "bordered",
           }
         )}
       >
-        <div className='plb-12 pis-12'>
+        <div className="plb-12 pis-12">
           <img
             src={characterIllustration}
-            alt='character-illustration'
-            className='max-bs-[500px] max-is-full bs-auto'
+            alt="character-illustration"
+            className="max-bs-[500px] max-is-full bs-auto"
           />
         </div>
         <Illustrations
-          image1={{ src: '/images/illustrations/objects/tree-2.png' }}
+          image1={{ src: "/images/illustrations/objects/tree-2.png" }}
           image2={null}
           maskImg={{ src: authBackground }}
         />
-      </div> */}
+      </div>
     </div>
   );
 };
