@@ -1,45 +1,44 @@
-// Next Imports
-import { cookies } from 'next/headers'
+// utils/settingsClient.js
 
-// Third-party Imports
-import 'server-only'
+import Cookies from 'js-cookie'
 
 // Config Imports
 import themeConfig from '@configs/themeConfig'
 
-export const getSettingsFromCookie = async () => {
-  const cookieStore = await cookies()
+export const getSettingsFromCookie = () => {
   const cookieName = themeConfig.settingsCookieName
+  const cookieValue = Cookies.get(cookieName)
 
-  return JSON.parse(cookieStore.get(cookieName)?.value || '{}')
+  try {
+    return cookieValue ? JSON.parse(cookieValue) : {}
+  } catch (err) {
+    console.error('Invalid settings cookie', err)
+    return {}
+  }
 }
 
-export const getMode = async () => {
-  const settingsCookie = await getSettingsFromCookie()
+export const getMode = () => {
+  const settingsCookie = getSettingsFromCookie()
 
   // Get mode from cookie or fallback to theme config
-  const _mode = settingsCookie.mode || themeConfig.mode
-
-  return _mode
+  return settingsCookie.mode || themeConfig.mode
 }
 
-export const getSystemMode = async () => {
-  const cookieStore = await cookies()
-  const mode = await getMode()
-  const colorPrefCookie = cookieStore.get('colorPref')?.value || 'light'
+export const getSystemMode = () => {
+  const mode = getMode()
+  const colorPrefCookie = Cookies.get('colorPref') || 'light'
 
   return (mode === 'system' ? colorPrefCookie : mode) || 'light'
 }
 
-export const getServerMode = async () => {
-  const mode = await getMode()
-  const systemMode = await getSystemMode()
+export const getServerMode = () => {
+  const mode = getMode()
+  const systemMode = getSystemMode()
 
   return mode === 'system' ? systemMode : mode
 }
 
-export const getSkin = async () => {
-  const settingsCookie = await getSettingsFromCookie()
-
+export const getSkin = () => {
+  const settingsCookie = getSettingsFromCookie()
   return settingsCookie.skin || 'default'
 }
