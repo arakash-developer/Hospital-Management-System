@@ -1,11 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
-import Layout from "../layout/Layout";
+import Layout from "@layout/Layout";
 import Appointments from "../pages/Appointments";
 import Dashboard from "../pages/Dashboard";
 import Doctors from "../pages/Doctors";
-import NotFound from "../pages/NotFound";
-import Patients from "../pages/Patients";
-import Login from "../components/login/Login";
+import NotFound from "@pages/NotFound";
+import Patients from "@pages/Patients";
+import Login from "@/components/login/Login";
 
 const routes = [
   {
