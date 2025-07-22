@@ -10,7 +10,10 @@
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
       "@layouts/*": ["./src/layouts/*"],
-      "@contexts/*": ["./src/contexts/*"]
+      "@contexts/*": ["./src/contexts/*"],
+      "@core/*": ["./src/core/*"],
+      "@menu/*": ["./src/menu/*"],
+      "@configs/*": ["./src/configs/*"],
     }
   },
   "include": ["src/**/*"],
