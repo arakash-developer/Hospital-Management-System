@@ -1,4 +1,5 @@
 // MUI Imports
+import themeConfig from "@/configs/themeConfig";
 import Logo from "@/layout/shared/Logo";
 import { Divider, Typography } from "@mui/material";
 import Button from "@mui/material/Button";
@@ -13,7 +14,7 @@ const Login = () => {
         </div>
         <div className="mt-5 flex flex-col gap-5 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset]">
           <div>
-            {/* <Typography variant='h4'>{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography> */}
+            <Typography variant='h4'>{`Welcome to ${themeConfig.templateName}!👋🏻`}</Typography>
             <Typography>Please sign in to continue</Typography>
           </div>
           {/* <Alert icon={false} className='bg-primaryLight'>
