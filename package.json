@@ -22,7 +22,8 @@
     "react-hook-form": "^7.54.1",
     "react-router-dom": "^7.0.0",
     "react-use": "^17.6.0",
-    "tailwindcss-logical": "^3.0.1"
+    "tailwindcss-logical": "^3.0.1",
+    "valibot": "^0.42.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.30.1",
