@@ -1,4 +1,3 @@
-'use client'
 import { createContext, useMemo, useState } from 'react'
 
 // Config Imports

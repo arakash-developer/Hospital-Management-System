@@ -9,7 +9,7 @@ const Login = () => {
     <div className="flex bs-full justify-center">
       <div className="flex justify-center items-center bs-full bg-backgroundPaper !min-is-full p-6 md:!min-is-[unset] md:p-12 md:is-[480px]">
         <div className='absolute block-start-5 sm:block-start-[33px] inline-start-6 sm:inline-start-[38px]'>
-          {/* <Logo /> */}
+          <Logo />
         </div>
         <div className="mt-5 flex flex-col gap-5 is-full sm:is-auto md:is-full sm:max-is-[400px] md:max-is-[unset]">
           <div>
