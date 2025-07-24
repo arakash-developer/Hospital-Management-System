@@ -31,6 +31,7 @@ import themeConfig from "@configs/themeConfig";
 // Hook Imports
 import { useImageVariant } from "@core/hooks/useImageVariant";
 import { useSettings } from "@core/hooks/useSettings";
+import { getServerMode } from "@/core/utils/serverHelpers";
 
 // Util Imports
 // import { getLocalizedUrl } from '@/utils/i18n'
@@ -49,8 +50,9 @@ const schema = object({
   ),
 });
 
-const Login = ({ mode }) => {
-  // States
+const Login = ( ) => {
+  // State Variables
+  let mode = getServerMode();
   const [isPasswordShown, setIsPasswordShown] = useState(false);
   const [errorState, setErrorState] = useState(null);
 
